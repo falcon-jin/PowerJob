@@ -86,6 +86,7 @@ public interface InstanceInfoRepository extends JpaRepository<InstanceInfoDO, Lo
     List<InstanceInfoDO> findByAppIdInAndStatusAndGmtModifiedBefore(List<Long> jobIds, int status, Date time);
 
 
+    @Transactional
     InstanceInfoDO findByInstanceId(long instanceId);
 
     /* --数据统计-- */
